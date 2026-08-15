@@ -1,13 +1,19 @@
 {
     "preset": "laravel",
-    "in": ["src"],
+    "in": [
+        "src"
+    ],
     "rules": {
         "array_indentation": true,
         "array_syntax": {
             "syntax": "short"
         },
         "trailing_comma_in_multiline": {
-            "elements": ["arrays", "arguments", "parameters"]
+            "elements": [
+                "arrays",
+                "arguments",
+                "parameters"
+            ]
         },
         "no_trailing_comma_in_singleline_array": true,
         "trim_array_spaces": true,
@@ -43,14 +49,20 @@
         "final_public_method_for_abstract_class": false,
         "self_static_accessor": true,
         "single_class_element_per_statement": {
-            "elements": ["const", "property"]
+            "elements": [
+                "const",
+                "property"
+            ]
         },
         "single_trait_insert_per_statement": false,
         "no_blank_lines_after_class_opening": true,
         "blank_line_after_namespace": true,
         "blank_line_after_opening_tag": false,
         "blank_line_before_statement": {
-            "statements": ["yield", "yield_from"]
+            "statements": [
+                "yield",
+                "yield_from"
+            ]
         },
         "blank_lines_before_namespace": {
             "max_line_breaks": 2,
@@ -120,7 +132,14 @@
             "use_nullable_type_declaration": true
         },
         "function_to_constant": {
-            "functions": ["get_called_class", "get_class", "get_class_this", "php_sapi_name", "phpversion", "pi"]
+            "functions": [
+                "get_called_class",
+                "get_class",
+                "get_class_this",
+                "php_sapi_name",
+                "phpversion",
+                "pi"
+            ]
         },
         "native_function_casing": true,
         "native_function_invocation": false,
@@ -142,7 +161,11 @@
         "group_import": false,
         "ordered_imports": {
             "sort_algorithm": "alpha",
-            "imports_order": ["class", "function", "const"]
+            "imports_order": [
+                "class",
+                "function",
+                "const"
+            ]
         },
         "no_leading_import_slash": true,
         "no_unused_imports": true,
@@ -151,7 +174,9 @@
         },
         "single_line_after_imports": true,
         "no_extra_blank_lines": {
-            "tokens": ["extra"]
+            "tokens": [
+                "extra"
+            ]
         },
         "no_empty_statement": true,
         "no_leading_namespace_whitespace": true,
@@ -222,7 +247,9 @@
         "magic_method_casing": true,
         "modernize_types_casting": true,
         "no_alias_functions": {
-            "sets": ["@all"]
+            "sets": [
+                "@all"
+            ]
         },
         "no_alias_language_construct_call": true,
         "no_empty_comment": true,
@@ -232,7 +259,10 @@
         },
         "no_spaces_after_function_name": true,
         "no_spaces_around_offset": {
-            "positions": ["inside", "outside"]
+            "positions": [
+                "inside",
+                "outside"
+            ]
         },
         "no_whitespace_before_comma_in_array": true,
         "no_unset_cast": true,
