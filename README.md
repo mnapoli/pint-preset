@@ -31,7 +31,7 @@ For Laravel apps:
 }
 ```
 
-Tests use slightly different rules. Create a `pint-tests.json`:
+For PHPUnit tests, create a `pint-tests.json`:
 
 ```json
 {
