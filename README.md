@@ -18,12 +18,33 @@ Any `preset`, `rules`, `in` or other options you add to your project's `pint.jso
 
 ## Tests
 
-Tests use slightly different rules ([`pint-tests.json`](pint-tests.json)). No config file needed in the project, point Pint directly at the vendor file:
+Tests use slightly different rules. Create a `pint-tests.json`:
 
-```bash
-vendor/bin/pint --config vendor/mnapoli/pint-preset/pint-tests.json
+```json
+{
+    "extend": "vendor/mnapoli/pint-preset/pint-tests.json"
+}
 ```
 
-It formats the `tests/` directory (resolved relative to the current directory).
+It formats the `tests/` directory. Run it with:
 
-Note: a local config cannot extend `pint-tests.json`, because Pint only supports one level of `extend`. To customize test rules, extend `vendor/mnapoli/pint-preset/pint.json` instead and re-declare the test-specific overrides.
+```bash
+vendor/bin/pint --config pint-tests.json
+```
+
+For example in CI:
+
+```yaml
+-   name: Pint
+    run: |
+        vendor/bin/pint --test
+        vendor/bin/pint --test --config pint-tests.json
+```
+
+## Contributing
+
+`pint-tests.json` is generated: since Pint's `extend` only supports one level (and consuming projects use theirs to extend `pint-tests.json`), it cannot extend `pint.json` and must contain the full rule set. Do not edit it directly. Instead, edit `pint.json` (common rules) or the `$overrides` in `generate-pint-tests.php` (test-specific rules), then run:
+
+```bash
+php generate-pint-tests.php
+```
