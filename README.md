@@ -14,9 +14,22 @@ Create `pint.json`:
 
 Any `preset`, `rules`, `in` or other options you add to your project's `pint.json` will override the ones from this preset. By default the preset formats the `src/` directory.
 
-> Note: the `extend` option requires Pint v1.23.0 or greater.
+For Laravel apps:
 
-## Tests
+```json
+{
+    "extend": "vendor/mnapoli/pint-preset/pint.json",
+    "in": [
+        "app",
+        "bootstrap",
+        "config",
+        "database",
+        "lang",
+        "resources",
+        "routes"
+    ]
+}
+```
 
 Tests use slightly different rules. Create a `pint-tests.json`:
 
@@ -40,7 +53,3 @@ For example in CI:
         vendor/bin/pint --test
         vendor/bin/pint --test --config pint-tests.json
 ```
-
-## Contributing
-
-Since Pint's `extend` only supports one level (and consuming projects extend `pint-tests.json`), it cannot extend `pint.json` and must contain the full rule set. When editing rules in `pint.json`, apply the same change to `pint-tests.json` to keep them in sync.
