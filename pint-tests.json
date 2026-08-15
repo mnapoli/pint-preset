@@ -1,0 +1,9 @@
+{
+    "extend": "pint.json",
+    "in": ["tests"],
+    "rules": {
+        "modifier_keywords": {
+            "elements": ["property", "const"]
+        }
+    }
+}

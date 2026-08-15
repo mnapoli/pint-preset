@@ -1,5 +1,6 @@
 {
     "preset": "laravel",
+    "in": ["src"],
     "rules": {
         "array_indentation": true,
         "array_syntax": {
@@ -35,9 +36,7 @@
             "multi_line_extends_each_single_line": false,
             "single_item_single_line": false
         },
-        "visibility_required": {
-            "elements": ["property", "const"]
-        },
+        "modifier_keywords": true,
         "date_time_immutable": true,
         "final_class": false,
         "final_internal_class": false,
