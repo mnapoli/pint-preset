@@ -1,0 +1,15 @@
+{
+    "name": "mnapoli/pint-preset",
+    "description": "Reusable Laravel Pint preset",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthieu Napoli",
+            "email": "matthieu@mnapoli.fr"
+        }
+    ],
+    "suggest": {
+        "laravel/pint": "The code style tool this preset is for"
+    }
+}
