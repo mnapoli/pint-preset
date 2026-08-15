@@ -43,8 +43,4 @@ For example in CI:
 
 ## Contributing
 
-`pint-tests.json` is generated: since Pint's `extend` only supports one level (and consuming projects use theirs to extend `pint-tests.json`), it cannot extend `pint.json` and must contain the full rule set. Do not edit it directly. Instead, edit `pint.json` (common rules) or the `$overrides` in `generate-pint-tests.php` (test-specific rules), then run:
-
-```bash
-php generate-pint-tests.php
-```
+Since Pint's `extend` only supports one level (and consuming projects extend `pint-tests.json`), it cannot extend `pint.json` and must contain the full rule set. When editing rules in `pint.json`, apply the same change to `pint-tests.json` to keep them in sync.
