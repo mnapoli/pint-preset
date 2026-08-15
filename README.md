@@ -1,16 +1,10 @@
-# mnapoli/pint-preset
-
-Reusable [Laravel Pint](https://laravel.com/docs/pint) preset.
-
-## Usage
-
-Install the package along with Pint:
+Personal [Laravel Pint](https://laravel.com/docs/pint) preset.
 
 ```bash
-composer require --dev laravel/pint mnapoli/pint-preset
+composer require --dev mnapoli/pint-preset
 ```
 
-Then create a `pint.json` in your project that extends the preset:
+Ceate `pint.json`:
 
 ```json
 {
